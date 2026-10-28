@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Argus — AI Debate Bot</title>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>Argus <span class="topic">debating FOR: "AI Will Replace the Clinical Hepatologist"</span></h1>
+
+    <div class="stage">
+      <div class="avatar" id="avatar">
+        <div class="face">
+          <div class="eye left"></div>
+          <div class="eye right"></div>
+          <div class="mouth" id="mouth"></div>
+        </div>
+        <div class="ring" id="ring"></div>
+      </div>
+      <div class="status" id="status">Connecting…</div>
+    </div>
+
+    <div class="voice-controls">
+      <div class="control-group">
+        <label for="voiceSelect">Voice:</label>
+        <select id="voiceSelect">
+          <option value="Puck">Puck (Male / Professional)</option>
+          <option value="Charon">Charon (Male / Deep)</option>
+          <option value="Kore">Kore (Female / Calm)</option>
+          <option value="Fenrir">Fenrir (Male / Energetic)</option>
+          <option value="Aoede">Aoede (Female / Warm)</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="paceSlider">Pace: <span id="paceValue">1.00x</span></label>
+        <input type="range" id="paceSlider" min="0.75" max="1.50" step="0.05" value="1.00" />
+      </div>
+    </div>
+
+    <div class="transcript" id="transcript"></div>
+
+    <div class="controls">
+      <button id="startBtn">Start Debate</button>
+      <button id="stopBtn" disabled>End</button>
+    </div>
+
+    <p class="hint">Just start talking any time — even while Argus is speaking — to interrupt it.</p>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
